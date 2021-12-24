@@ -21,13 +21,9 @@ import viteCompression from 'vite-plugin-compression'
 const fs = require('fs')
 const dotenv = require('dotenv')
 
-// https://vitejs.dev/config/
 export default ({command, mode}) => {
     let NODE_ENV = process.env.NODE_ENV || 'development';
     let envFiles = [];
-
-    console.log(NODE_ENV, 'NODE_ENV')
-    console.log(command, 'command')
 
     //根据不同的环境使用不同的环境变量
     if(command === 'serve'){
@@ -44,13 +40,11 @@ export default ({command, mode}) => {
         ]
     }
     for (const file of envFiles) {
-        console.log(file, 'file')
         const envConfig = dotenv.parse(fs.readFileSync(file))
         for (const k in envConfig) {
             process.env[k] = envConfig[k]
         }
     }
-    console.log(process.env.VITE_API_DOMAIN, 'VITE_API_DOMAIN')
 
     return defineConfig({
         server: {

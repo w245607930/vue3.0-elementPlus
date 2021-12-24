@@ -3,7 +3,8 @@
     homePage
     <van-button @click="goTest1" type="primary">跳转test1</van-button>
 
-     <p>store-count: {{ store.state.count }}</p>
+     <p class="test">store-count: {{ store.state.count }}</p>
+     <p class="norem-test">store-count: {{ store.state.count }}</p>
 
         <input type="text" :value="store.state.count" @input="countInput"/>
         <button @click="setupCount(100)">设置count为100</button>
@@ -187,9 +188,9 @@
         user.firstName = 'LuckHK '
     }
 
-//    onBeforeRouteUpdate((to, from) =>{
-//        console.log(to, '======')
-//    })
+   onBeforeRouteUpdate((to, from) =>{
+       console.log(to, '======')
+   })
 //
 //    onBeforeRouteLeave((to, from) => {
 //        console.log(to, 'onBeforeRouteLeave======')
@@ -201,7 +202,12 @@
         min-height: 100vh;
         overflow: hidden;
     }
-
+    .test{
+      font-size: 30px;
+    }
+    .norem-test{
+      font-size: 30px;
+    }
     .skeleton {
         /deep/.van-skeleton__content {
             display: flex;

@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '~/css/main.css'
+import '~/css/variable.less'
+import '~/js/rem'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
