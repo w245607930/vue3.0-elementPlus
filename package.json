@@ -1,0 +1,34 @@
+{
+  "name": "vue3.0-vant3.3-2021.12",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "test": "cross-env vite build --mode development",
+    "build": "cross-env vite build --mode production",
+    "serve": "vite preview",
+    "deploy:dev": " deploy-cli-service deploy --mode dev"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "element-plus": "^1.2.0-beta.6",
+    "nprogress": "^0.2.0",
+    "vant": "^3.3.6",
+    "vite-plugin-compression": "^0.3.6",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "axios": "^0.24.0",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.1.1",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "qs": "^6.10.2",
+    "unplugin-auto-import": "^0.5.1",
+    "unplugin-vue-components": "^0.17.6",
+    "vite": "^2.6.4",
+    "vite-plugin-style-import": "^1.4.0"
+  }
+}
